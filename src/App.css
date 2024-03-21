@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: rgba(255, 255, 255, 1);
+  --backgroundColor: rgba(7, 7, 36, 1);
+  --borderColor: rgba(56, 56, 79, 1);
+  --textColor1: rgba(131, 131, 145, 1);
+  --textColor2: rgba(193, 193, 200, 1);
+  --mercuryColor: rgba(222, 244, 252, 1);
+  --venusColor: rgba(247, 204, 127, 1);
+  --earthColor: rgba(84, 91, 254, 1);
+  --marsColor: rgba(255, 106, 69, 1);
+  --jupiterColor: rgba(205, 173, 122, 1);
+  --saturnColor: rgba(252, 203, 107, 1);
+  --uranusColor: rgba(101, 240, 213, 1);
+  --neptuneColor: rgba(73, 126, 250, 1);
+}
