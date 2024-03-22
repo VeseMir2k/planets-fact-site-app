@@ -35,6 +35,7 @@
 html {
   font-family: 'Spartan';
   font-weight: 700;
+  color: var(--white);
 }
 
 body {
@@ -53,6 +54,42 @@ body {
   color: var(--white);
 }
 
-.active::before {
+.mercuryColor.active::before,
+.mercuryColor:hover::before {
+  background: var(--mercuryColor);
+}
+
+.venusColor.active::before,
+.venusColor:hover::before {
+  background: var(--venusColor);
+}
+
+.earthColor.active::before,
+.earthColor:hover::before {
+  background: var(--earthColor);
+}
+
+.marsColor.active::before,
+.marsColor:hover::before {
   background: var(--marsColor);
+}
+
+.jupiterColor.active::before,
+.jupiterColor:hover::before {
+  background: var(--jupiterColor);
+}
+
+.saturnColor.active::before,
+.saturnColor:hover::before {
+  background: var(--saturnColor);
+}
+
+.uranusColor.active::before,
+.uranusColor:hover::before {
+  background: var(--uranusColor);
+}
+
+.neptuneColor.active::before,
+.neptuneColor:hover::before {
+  background: var(--neptuneColor);
 }
