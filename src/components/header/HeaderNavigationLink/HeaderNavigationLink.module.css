@@ -1,0 +1,36 @@
+.navLink {
+  position: relative;
+  border-bottom: 1px solid var(--borderColor);
+  padding: 20px 0;
+}
+
+.navLink:last-of-type {
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .navlink {
+    display: block;
+    margin: 27px 0;
+    border: none;
+    padding: 0;
+    line-height: 25px;
+  }
+
+  .navLink:hover {
+    color: var(--white);
+  }
+}
+
+@media (min-width: 1024px) {
+  .navLink::before {
+    position: absolute;
+    top: -27px;
+    width: 100%;
+    height: 4px;
+    content: '';
+  }
+  .navLink::before:hover {
+    background: var(--earthColor);
+  }
+}

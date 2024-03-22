@@ -1,36 +1,25 @@
-import { NavLink } from 'react-router-dom';
+import HeaderNavigationLink from '../HeaderNavigationLink';
 import PathConstants from '../../../routes/PathConstants';
-import { nav, navLink } from './HeaderNavigation.module.css';
+import { nav } from './HeaderNavigation.module.css';
+import { useContext } from 'react';
+import { ColorPlanetsContext } from '../../context/AppContext';
 
 const HeaderNavigation = () => {
-  const colors = [
-    'bg-mercuryColor',
-    'bg-venusColor',
-    'bg-earthColor',
-    'bg-marsColor',
-    'bg-jupiterColor',
-    'bg-saturnColor',
-    'bg-uranusColor',
-    'bg-neptuneColor'
-  ];
+  const colorPlanets = useContext(ColorPlanetsContext);
 
   const links = Object.keys(PathConstants).map(
-    (key, index) =>
+    (key) =>
       key === 'HOME' || (
-        <NavLink className={navLink} key={key} to={PathConstants[key]}>
-          <span
-            className={`${colors[index - 1]} mr-[25px] size-[20px] rounded-[50%] md:hidden`}></span>{' '}
-          {key}
-          <img
-            className="absolute right-[8px] self-center md:hidden"
-            src="./assets/icon-chevron.svg"
-            alt=""
-          />
-        </NavLink>
+        <HeaderNavigationLink key={key} idx={key} PathConstants={PathConstants[key]} />
       )
   );
 
-  return <nav className={nav}>{links}</nav>;
+  return (
+    <nav className={nav}>
+      {links}
+      {console.log(colorPlanets)}
+    </nav>
+  );
 };
 
 export default HeaderNavigation;
