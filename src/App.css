@@ -1,7 +1,19 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: 'Antonio';
+  src: url('./fonts/Antonio-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Spartan';
+  src: url('./fonts/Spartan-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Spartan';
+  src: url('./fonts/Spartan-Bold.ttf');
+  font-weight: 700;
 }
 
 :root {
@@ -18,4 +30,29 @@
   --saturnColor: rgba(252, 203, 107, 1);
   --uranusColor: rgba(101, 240, 213, 1);
   --neptuneColor: rgba(73, 126, 250, 1);
+}
+
+html {
+  font-family: 'Spartan';
+  font-weight: 700;
+}
+
+body {
+  background: url('./assets/background-stars.svg');
+  background-color: var(--backgroundColor);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.active {
+  color: var(--white);
+}
+
+.active::before {
+  background: var(--marsColor);
 }
