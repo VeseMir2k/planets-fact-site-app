@@ -93,3 +93,6 @@ body {
 .neptuneColor:hover::before {
   background: var(--neptuneColor);
 }
+
+.hamburger-react {
+}
