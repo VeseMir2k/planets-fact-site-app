@@ -1,8 +1,7 @@
-import { createContext, useContext } from 'react';
+import { createContext, useState } from 'react';
 
-const ColorPlanetsContext = createContext();
-
-export const useColorPlanets = () => useContext(ColorPlanetsContext);
+export const ColorPlanetsContext = createContext();
+export const NavigationOpenContext = createContext();
 
 export const ColorPlanetsProvider = ({ children }) => {
   const colorPlanets = [
@@ -17,6 +16,20 @@ export const ColorPlanetsProvider = ({ children }) => {
   ];
 
   return (
-    <ColorPlanetsContext.Provider value={colorPlanets}>{children}</ColorPlanetsContext.Provider>
+    <ColorPlanetsContext.Provider value={{ colorPlanets }}>{children}</ColorPlanetsContext.Provider>
+  );
+};
+
+export const NavigationOpenProvider = ({ children }) => {
+  const [isOpen, setOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setOpen((prevIsOpen) => !prevIsOpen);
+  };
+
+  return (
+    <NavigationOpenContext.Provider value={{ isOpen, toggleOpen }}>
+      {children}
+    </NavigationOpenContext.Provider>
   );
 };

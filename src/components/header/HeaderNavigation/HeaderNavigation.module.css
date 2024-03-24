@@ -1,7 +1,7 @@
 .nav {
   display: flex;
   position: absolute;
-  right: 0;
+  right: -100%;
   flex-direction: column;
   z-index: 30;
   background: var(--backgroundColor);
@@ -11,6 +11,11 @@
   color: var(--white);
   font-size: 15px;
   letter-spacing: 1px;
+  transition: right 0.2s ease;
+}
+
+.open {
+  right: 0;
 }
 
 @media (min-width: 768px) {
