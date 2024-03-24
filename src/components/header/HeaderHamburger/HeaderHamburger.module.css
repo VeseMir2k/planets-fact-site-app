@@ -3,3 +3,9 @@
   top: 14px;
   right: 12px;
 }
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}

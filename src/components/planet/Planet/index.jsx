@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import planets from '../../../data/planets.json';
+import PlanetHeading from '../PlanetHeading';
 import PlanetImage from '../PlanetImage';
 import PlanetNavigation from '../PlanetNavigation';
-import PlanetHeading from '../PlanetHeading';
 import PlanetStatistics from '../PlanetStatistics';
+import { planet } from './Planet.module.css';
 
 const Planet = () => {
   const [sectionPlanet, setSectionPlanet] = useState('overview');
@@ -14,7 +15,7 @@ const Planet = () => {
   const planetData = planets.filter((planet) => planet.name.toLowerCase() == locationPathName);
 
   return (
-    <section className="absolute top-[75px] md:static">
+    <section className={planet}>
       <PlanetHeading
         namePlanet={planetData[0].name}
         sectionPlanetData={planetData[0][sectionPlanet]}
