@@ -1,8 +1,9 @@
+import classNames from 'classnames';
 import { useContext } from 'react';
 import PathConstants from '../../../routes/PathConstants';
 import { ColorPlanetsContext, NavigationOpenContext } from '../../context/AppContext';
 import HeaderNavigationLink from '../HeaderNavigationLink';
-import { nav, open } from './HeaderNavigation.module.css';
+import { nav, openNav } from './HeaderNavigation.module.css';
 
 const HeaderNavigation = () => {
   const { colorPlanets } = useContext(ColorPlanetsContext);
@@ -20,7 +21,7 @@ const HeaderNavigation = () => {
       )
   );
 
-  return <nav className={`${nav} ${!isOpen || open}`}>{links}</nav>;
+  return <nav className={classNames(nav, { [openNav]: isOpen })}>{links}</nav>;
 };
 
 export default HeaderNavigation;

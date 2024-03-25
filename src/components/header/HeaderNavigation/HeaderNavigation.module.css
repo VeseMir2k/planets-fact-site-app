@@ -14,7 +14,7 @@
   transition: right 0.2s ease;
 }
 
-.open {
+.openNav {
   right: 0;
 }
 
