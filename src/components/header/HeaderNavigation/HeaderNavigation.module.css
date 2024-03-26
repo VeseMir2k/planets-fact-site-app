@@ -3,6 +3,8 @@
   position: absolute;
   right: -100%;
   flex-direction: column;
+  font-family: 'Spartan';
+  font-weight: 700;
   z-index: 30;
   background: var(--backgroundColor);
   padding: 24px;

@@ -1,10 +1,11 @@
-/* eslint-disable react/prop-types */
+import { description, heading, source, title } from './PlanetHeading.module.css';
+
 const PlanetHeading = ({ sectionPlanetData, namePlanet }) => {
   return (
-    <div>
-      <h1>{namePlanet}</h1>
-      <p>{sectionPlanetData.content}</p>
-      <span>
+    <div className={heading}>
+      <h1 className={title}>{namePlanet}</h1>
+      <p className={description}>{sectionPlanetData.content}</p>
+      <span className={source}>
         Source:
         <a href={sectionPlanetData.source}>
           Wikipedia <img src="./assets/icon-source.svg" alt="" />

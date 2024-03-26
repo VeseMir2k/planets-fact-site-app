@@ -1,0 +1,13 @@
+.button {
+  position: relative;
+  margin: 20px 0;
+}
+
+.button::before {
+  position: absolute;
+  bottom: -20px;
+  content: '';
+  height: 4px;
+  width: 100%;
+  transition: background 0.15s ease-in;
+}

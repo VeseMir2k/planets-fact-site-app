@@ -3,6 +3,7 @@
   border-bottom: 1px solid var(--borderColor);
   padding: 16px 0 16px 24px;
   font-family: 'Antonio';
+  font-weight: 400;
   font-size: 28px;
   letter-spacing: -1px;
   color: var(--white);
