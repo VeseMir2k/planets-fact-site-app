@@ -1,6 +1,6 @@
 import { Sling as Hamburger } from 'hamburger-react';
 import { useContext } from 'react';
-import { NavigationOpenContext } from '../../context/AppContext';
+import { NavigationOpenContext } from '../../../context/AppContext';
 import { hamburger } from './HeaderHamburger.module.css';
 
 const HeaderHamburger = () => {

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { useContext } from 'react';
+import { ColorPlanetsContext, NavigationOpenContext } from '../../../context/AppContext';
 import PathConstants from '../../../routes/PathConstants';
-import { ColorPlanetsContext, NavigationOpenContext } from '../../context/AppContext';
 import HeaderNavigationLink from '../HeaderNavigationLink';
 import { nav, openNav } from './HeaderNavigation.module.css';
 

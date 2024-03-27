@@ -1,20 +1,24 @@
+import React from 'react';
+
 import PlanetNavigationButton from '../PlanetNavigationButton';
 import { nav } from './PlanetNavigation.module.css';
 
-const PlanetNavigation = ({ setSectionPlanet }) => {
+const PlanetNavigation = ({ namePlanet }) => {
   const sectionsPlanet = ['overview', 'structure', 'geology'];
   const buttonNames = ['Overview', 'Structure', 'Surface'];
 
-  const buttons = sectionsPlanet.map((section, index) => (
-    <PlanetNavigationButton
-      key={index}
-      section={section}
-      setSectionPlanet={setSectionPlanet}
-      name={buttonNames[index]}
-    />
-  ));
-
-  return <div className={nav}>{buttons}</div>;
+  return (
+    <div className={nav}>
+      {sectionsPlanet.map((section, index) => (
+        <PlanetNavigationButton
+          key={index}
+          namePlanet={namePlanet}
+          section={section}
+          name={buttonNames[index]}
+        />
+      ))}
+    </div>
+  );
 };
 
 export default PlanetNavigation;

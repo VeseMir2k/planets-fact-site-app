@@ -1,12 +1,26 @@
+import classNames from 'classnames';
+import { useContext } from 'react';
+import { SectionPlanetContext } from '../../../context/AppContext';
 import { button } from './PlanetNavigationButton.module.css';
 
-const PlanetNavigationButton = ({ name, setSectionPlanet, section }) => {
-  const handleButton = () => {
+const PlanetNavigationButton = ({ name, section, namePlanet }) => {
+  const { setSectionPlanet } = useContext(SectionPlanetContext);
+
+  const namePlanetBtn = `${namePlanet.toLowerCase()}ColorBtn`;
+
+  const nameSectionBtn = `${name.toLowerCase()}Btn`;
+
+  const handleButton = (event) => {
+    const buttons = document.querySelectorAll(`.${namePlanetBtn}`);
+    buttons.forEach((button) => button.classList.remove('active'));
     setSectionPlanet(section);
+    event.target.classList.add('active');
   };
 
   return (
-    <button className={button} onClick={() => handleButton()}>
+    <button
+      className={classNames(button, namePlanetBtn, nameSectionBtn)}
+      onClick={(event) => handleButton(event)}>
       {name}
     </button>
   );

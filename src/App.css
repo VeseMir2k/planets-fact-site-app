@@ -93,3 +93,8 @@ body {
 .neptuneColor:hover::before {
   background: var(--neptuneColor);
 }
+
+.venusColorBtn.active::before,
+.venusColorBtn:hover::before {
+  background: var(--venusColor);
+}
