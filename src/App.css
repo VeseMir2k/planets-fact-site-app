@@ -55,46 +55,57 @@ body {
 }
 
 .mercuryColor.active::before,
-.mercuryColor:hover::before {
+.mercuryColor:hover::before,
+.mercuryColorBtn.active::before,
+.mercuryColorBtn:hover::before {
   background: var(--mercuryColor);
 }
 
 .venusColor.active::before,
-.venusColor:hover::before {
+.venusColor:hover::before,
+.venusColorBtn.active::before,
+.venusColorBtn:hover::before {
   background: var(--venusColor);
 }
 
 .earthColor.active::before,
-.earthColor:hover::before {
+.earthColor:hover::before,
+.earthColorBtn.active::before,
+.earthColorBtn:hover::before {
   background: var(--earthColor);
 }
 
 .marsColor.active::before,
-.marsColor:hover::before {
+.marsColor:hover::before,
+.marsColorBtn.active::before,
+.marsColorBtn:hover::before {
   background: var(--marsColor);
 }
 
 .jupiterColor.active::before,
-.jupiterColor:hover::before {
+.jupiterColor:hover::before,
+.jupiterColorBtn.active::before,
+.jupiterColorBtn:hover::before {
   background: var(--jupiterColor);
 }
 
 .saturnColor.active::before,
-.saturnColor:hover::before {
+.saturnColor:hover::before,
+.saturnColorBtn.active::before,
+.saturnColorBtn:hover::before {
   background: var(--saturnColor);
 }
 
 .uranusColor.active::before,
-.uranusColor:hover::before {
+.uranusColor:hover::before,
+.uranusColorBtn.active::before,
+.uranusColorBtn:hover::before {
   background: var(--uranusColor);
 }
 
 .neptuneColor.active::before,
-.neptuneColor:hover::before {
+.neptuneColor:hover::before,
+.neptuneColorBtn.active::before,
+.neptuneColorBtn:hover::before {
   background: var(--neptuneColor);
-}
-
-.venusColorBtn.active::before,
-.venusColorBtn:hover::before {
-  background: var(--venusColor);
 }
