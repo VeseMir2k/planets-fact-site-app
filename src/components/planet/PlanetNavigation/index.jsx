@@ -1,5 +1,4 @@
 import React from 'react';
-
 import PlanetNavigationButton from '../PlanetNavigationButton';
 import { nav } from './PlanetNavigation.module.css';
 

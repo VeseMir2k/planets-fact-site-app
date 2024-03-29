@@ -10,15 +10,15 @@ import { dot, iconChevron, navLink } from './HeaderNavigationLink.module.css';
 
 const HeaderNavigationLink = ({ pathConstant, PathConstants, dotColor }) => {
   const { toggleOpen } = useContext(NavigationOpenContext);
-  const { setSectionPlanetOverview } = useContext(SectionPlanetContext);
-  const { setOverviewButtonActive } = useContext(OverviewButtonActiveContext);
+  const { setSelectedSectionPlanetOverview } = useContext(SectionPlanetContext);
+  const { setActiveOverviewButton } = useContext(OverviewButtonActiveContext);
   const dotBackground = `var(--${dotColor})`;
   const overviewPlanetButtonClass = `${pathConstant.toLowerCase()}ColorBtn`;
 
   const handleNavLink = () => {
     toggleOpen();
-    setSectionPlanetOverview();
-    setOverviewButtonActive(overviewPlanetButtonClass);
+    setSelectedSectionPlanetOverview();
+    setActiveOverviewButton(overviewPlanetButtonClass);
   };
 
   return (

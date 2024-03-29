@@ -37,29 +37,29 @@ export const NavigationOpenProvider = ({ children }) => {
 };
 
 export const SectionPlanetProvider = ({ children }) => {
-  const [sectionPlanet, setSectionPlanet] = useState('overview');
+  const [selectedSectionPlanet, setSelectedSectionPlanet] = useState('overview');
 
-  const setSectionPlanetOverview = () => {
-    setSectionPlanet('overview');
+  const setSelectedSectionPlanetOverview = () => {
+    setSelectedSectionPlanet('overview');
   };
 
   return (
     <SectionPlanetContext.Provider
-      value={{ sectionPlanet, setSectionPlanet, setSectionPlanetOverview }}>
+      value={{ selectedSectionPlanet, setSelectedSectionPlanetOverview }}>
       {children}
     </SectionPlanetContext.Provider>
   );
 };
 
 export const OverviewButtonActiveProvider = ({ children }) => {
-  const [overviewButtonActive, setOverviewButtonActive] = useState('overviewBtn');
+  const [activeOverviewButton, setActiveOverviewButton] = useState('overviewBtn');
 
   useEffect(() => {
-    document.querySelector(`.${overviewButtonActive}`).classList.add('active');
-  }, [overviewButtonActive]);
+    document.querySelector(`.${activeOverviewButton}`).classList.add('active');
+  }, [activeOverviewButton]);
 
   return (
-    <OverviewButtonActiveContext.Provider value={{ overviewButtonActive, setOverviewButtonActive }}>
+    <OverviewButtonActiveContext.Provider value={{ activeOverviewButton, setActiveOverviewButton }}>
       {children}
     </OverviewButtonActiveContext.Provider>
   );

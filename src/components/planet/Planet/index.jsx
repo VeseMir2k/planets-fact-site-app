@@ -9,7 +9,7 @@ import PlanetStatistics from '../PlanetStatistics';
 import planetCss from './Planet.module.css';
 
 const Planet = () => {
-  const { sectionPlanet } = useContext(SectionPlanetContext);
+  const { selectedSectionPlanet } = useContext(SectionPlanetContext);
   const location = useLocation();
   const locationPathName = location.pathname === '/' ? 'earth' : location.pathname.substring(1);
 
@@ -19,9 +19,9 @@ const Planet = () => {
     <section className={planetCss.planet}>
       <PlanetHeading
         namePlanet={planetData[0].name}
-        sectionPlanetData={planetData[0][sectionPlanet]}
+        sectionPlanetData={planetData[0][selectedSectionPlanet]}
       />
-      <PlanetImage sectionPlanet={sectionPlanet} imageData={planetData[0].images} />
+      <PlanetImage sectionPlanet={selectedSectionPlanet} imageData={planetData[0].images} />
       <PlanetNavigation namePlanet={planetData[0].name} />
       <PlanetStatistics planetData={planetData} />
     </section>
