@@ -21,7 +21,11 @@ const Planet = () => {
         namePlanet={planetData[0].name}
         sectionPlanetData={planetData[0][selectedSectionPlanet]}
       />
-      <PlanetImage sectionPlanet={selectedSectionPlanet} imageData={planetData[0].images} />
+      <PlanetImage
+        sectionPlanet={selectedSectionPlanet}
+        namePlanet={planetData[0].name}
+        imageData={planetData[0].images}
+      />
       <PlanetNavigation namePlanet={planetData[0].name} />
       <PlanetStatistics planetData={planetData} />
     </section>

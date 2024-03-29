@@ -1,4 +1,6 @@
-const PlanetImage = ({ imageData, sectionPlanet }) => {
+import PlanetImageCss from './PlanetImage.module.css';
+
+const PlanetImage = ({ imageData, sectionPlanet, namePlanet }) => {
   const setSectionImage = () => {
     if (sectionPlanet === 'overview') {
       return 'planet';
@@ -10,11 +12,14 @@ const PlanetImage = ({ imageData, sectionPlanet }) => {
   };
 
   const imageUrl = imageData[setSectionImage()];
+  const planetImage = `${namePlanet.toLowerCase()}Image`;
 
   return (
-    <div>
-      <img src={imageUrl} alt="" />
-      {sectionPlanet === 'geology' && <img src={imageData.geology} />}
+    <div className={PlanetImageCss.imageContainer}>
+      <img className={PlanetImageCss[planetImage]} src={imageUrl} alt="planet" />
+      {sectionPlanet === 'geology' && (
+        <img className={PlanetImageCss.geologyImage} src={imageData.geology} alt="planet geology" />
+      )}
     </div>
   );
 };

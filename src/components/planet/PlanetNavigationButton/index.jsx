@@ -4,7 +4,7 @@ import { SectionPlanetContext } from '../../../context/AppContext';
 import { button } from './PlanetNavigationButton.module.css';
 
 const PlanetNavigationButton = ({ name, section, namePlanet }) => {
-  const { setSelectedSectionPlanetOverview } = useContext(SectionPlanetContext);
+  const { setSelectedSectionPlanet } = useContext(SectionPlanetContext);
 
   const namePlanetBtn = `${namePlanet.toLowerCase()}ColorBtn`;
 
@@ -13,7 +13,7 @@ const PlanetNavigationButton = ({ name, section, namePlanet }) => {
   const handleButton = (event) => {
     const buttons = document.querySelectorAll(`.${namePlanetBtn}`);
     buttons.forEach((button) => button.classList.remove('active'));
-    setSelectedSectionPlanetOverview(section);
+    setSelectedSectionPlanet(section);
     event.target.classList.add('active');
   };
 

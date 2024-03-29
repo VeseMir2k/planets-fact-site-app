@@ -1,0 +1,54 @@
+.imageContainer {
+  position: relative;
+  grid-area: 2/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.mercuryImage {
+  width: 111px;
+  height: 111px;
+}
+
+.venusImage {
+  width: 154px;
+  height: 154px;
+}
+
+.earthImage {
+  width: 173px;
+  height: 173px;
+}
+
+.marsImage {
+  width: 129px;
+  height: 129px;
+}
+
+.jupiterImage {
+  width: 224px;
+  height: 224px;
+}
+
+.saturnImage {
+  width: 256px;
+  height: 256px;
+}
+
+.uranusImage {
+  width: 176px;
+  height: 176px;
+}
+
+.neptuneImage {
+  width: 173px;
+  height: 173px;
+}
+
+.geologyImage {
+  position: absolute;
+  bottom: 30px;
+  width: 70px;
+}

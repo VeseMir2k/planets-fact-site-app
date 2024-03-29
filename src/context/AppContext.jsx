@@ -45,7 +45,7 @@ export const SectionPlanetProvider = ({ children }) => {
 
   return (
     <SectionPlanetContext.Provider
-      value={{ selectedSectionPlanet, setSelectedSectionPlanetOverview }}>
+      value={{ selectedSectionPlanet, setSelectedSectionPlanet, setSelectedSectionPlanetOverview }}>
       {children}
     </SectionPlanetContext.Provider>
   );
