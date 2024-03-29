@@ -1,12 +1,12 @@
 .button {
   position: relative;
-  margin: 20px 0;
+  padding: 20px 0;
   cursor: pointer;
 }
 
 .button::before {
   position: absolute;
-  bottom: -20px;
+  bottom: 0;
   content: '';
   height: 4px;
   width: 100%;

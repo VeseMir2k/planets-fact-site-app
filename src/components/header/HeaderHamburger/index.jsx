@@ -6,8 +6,16 @@ import { hamburger } from './HeaderHamburger.module.css';
 const HeaderHamburger = () => {
   const { isOpen, toggleOpen } = useContext(NavigationOpenContext);
 
+  const handleHamburger = () => {
+    if (!isOpen) {
+      document.body.classList.add('overflowHidden');
+    } else {
+      document.body.classList.remove('overflowHidden');
+    }
+  };
+
   return (
-    <div className={hamburger}>
+    <div onClick={handleHamburger} className={hamburger}>
       <Hamburger size={24} toggled={isOpen} toggle={toggleOpen} />
     </div>
   );
