@@ -1,0 +1,26 @@
+.statistic {
+  padding: 9px 24px 13px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--borderColor);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.statistic:last-of-type {
+  margin-bottom: 0;
+}
+
+.titleStatistic {
+  font-size: 8px;
+  color: var(--textColor1);
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+}
+
+.dataStatistic {
+  font-family: 'Antonio';
+  letter-spacing: -0.75px;
+  font-size: 20px;
+}

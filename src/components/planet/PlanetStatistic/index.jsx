@@ -1,8 +1,10 @@
-const PlanetStatistic = ({ name, statistic }) => {
+import PlanetStatisticCSS from './PlanetStatistic.module.css';
+
+const PlanetStatistic = ({ title, statistic }) => {
   return (
-    <div>
-      <p>{name}</p>
-      <p>{statistic}</p>
+    <div className={PlanetStatisticCSS.statistic}>
+      <p className={PlanetStatisticCSS.titleStatistic}>{title}</p>
+      <p className={PlanetStatisticCSS.dataStatistic}>{statistic}</p>
     </div>
   );
 };
