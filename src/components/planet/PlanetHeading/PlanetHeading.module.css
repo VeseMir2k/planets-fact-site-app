@@ -2,6 +2,7 @@
   font-weight: 700;
   font-family: 'Spartan';
   text-align: center;
+  padding: 0 24px;
 }
 
 .title {
@@ -18,6 +19,16 @@
 }
 
 .source {
+  display: block;
+  color: var(--textColor1);
+  margin-top: 32px;
   font-size: 12px;
   font-weight: 400;
+  line-height: 25px;
+}
+
+.wikipedia {
+  color: var(--textColor2);
+  font-weight: 700;
+  text-decoration: underline;
 }
