@@ -29,8 +29,16 @@ export const NavigationOpenProvider = ({ children }) => {
     setOpen((prevIsOpen) => !prevIsOpen);
   };
 
+  const toggleOverflowHidden = () => {
+    if (!isOpen) {
+      document.body.classList.add('overflowHidden');
+    } else {
+      document.body.classList.remove('overflowHidden');
+    }
+  };
+
   return (
-    <NavigationOpenContext.Provider value={{ isOpen, toggleOpen }}>
+    <NavigationOpenContext.Provider value={{ isOpen, toggleOpen, toggleOverflowHidden }}>
       {children}
     </NavigationOpenContext.Provider>
   );

@@ -12,10 +12,10 @@
 
 .dot {
   display: block;
+  margin-right: 25px;
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  margin-right: 25px;
 }
 
 .iconChevron {
@@ -47,16 +47,16 @@
 
 @media (min-width: 1024px) {
   .navLink {
-    margin-top: 33px;
     transition: color 0.15s ease-in;
+    margin-top: 33px;
   }
 
   .navLink::before {
     position: absolute;
     top: -33px;
+    transition: background 0.15s ease-in;
     width: 100%;
     height: 4px;
     content: '';
-    transition: background 0.15s ease-in;
   }
 }

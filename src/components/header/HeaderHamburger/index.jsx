@@ -1,21 +1,13 @@
 import { Sling as Hamburger } from 'hamburger-react';
 import { useContext } from 'react';
 import { NavigationOpenContext } from '../../../context/AppContext';
-import { hamburger } from './HeaderHamburger.module.css';
+import HamburgerCSS from './HeaderHamburger.module.css';
 
 const HeaderHamburger = () => {
-  const { isOpen, toggleOpen } = useContext(NavigationOpenContext);
-
-  const handleHamburger = () => {
-    if (!isOpen) {
-      document.body.classList.add('overflowHidden');
-    } else {
-      document.body.classList.remove('overflowHidden');
-    }
-  };
+  const { isOpen, toggleOpen, toggleOverflowHidden } = useContext(NavigationOpenContext);
 
   return (
-    <div onClick={handleHamburger} className={hamburger}>
+    <div onClick={toggleOverflowHidden} className={HamburgerCSS.hamburger}>
       <Hamburger size={24} toggled={isOpen} toggle={toggleOpen} />
     </div>
   );

@@ -6,16 +6,17 @@ import {
   OverviewButtonActiveContext,
   SectionPlanetContext
 } from '../../../context/AppContext';
-import { dot, iconChevron, navLink } from './HeaderNavigationLink.module.css';
+import NavigationLinkCSS from './HeaderNavigationLink.module.css';
 
 const HeaderNavigationLink = ({ pathConstant, PathConstants, dotColor }) => {
-  const { toggleOpen } = useContext(NavigationOpenContext);
+  const { toggleOpen, toggleOverflowHidden } = useContext(NavigationOpenContext);
   const { setSelectedSectionPlanetOverview } = useContext(SectionPlanetContext);
   const { setActiveOverviewButton } = useContext(OverviewButtonActiveContext);
   const dotBackground = `var(--${dotColor})`;
   const overviewPlanetButtonClass = `${pathConstant.toLowerCase()}ColorBtn`;
 
   const handleNavLink = () => {
+    toggleOverflowHidden();
     toggleOpen();
     setSelectedSectionPlanetOverview();
     setActiveOverviewButton(overviewPlanetButtonClass);
@@ -24,11 +25,15 @@ const HeaderNavigationLink = ({ pathConstant, PathConstants, dotColor }) => {
   return (
     <NavLink
       onClick={() => handleNavLink()}
-      className={classNames(navLink, dotColor)}
+      className={classNames(NavigationLinkCSS.navLink, dotColor)}
       to={PathConstants}>
-      <span className={dot} style={{ background: `${dotBackground}` }}></span>
+      <span className={NavigationLinkCSS.dot} style={{ background: `${dotBackground}` }}></span>
       {pathConstant}
-      <img className={iconChevron} src="./assets/icon-chevron.svg" alt="icon chevron" />
+      <img
+        className={NavigationLinkCSS.iconChevron}
+        src="./assets/icon-chevron.svg"
+        alt="icon chevron"
+      />
     </NavLink>
   );
 };

@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { ColorPlanetsContext, NavigationOpenContext } from '../../../context/AppContext';
 import PathConstants from '../../../routes/PathConstants';
 import HeaderNavigationLink from '../HeaderNavigationLink';
-import { nav, openNav } from './HeaderNavigation.module.css';
+import NavigationCSS from './HeaderNavigation.module.css';
 
 const HeaderNavigation = () => {
   const { colorPlanets } = useContext(ColorPlanetsContext);
@@ -21,7 +21,11 @@ const HeaderNavigation = () => {
       )
   );
 
-  return <nav className={classNames(nav, { [openNav]: isOpen })}>{links}</nav>;
+  return (
+    <nav className={classNames(NavigationCSS.nav, { [NavigationCSS.openNav]: isOpen })}>
+      {links}
+    </nav>
+  );
 };
 
 export default HeaderNavigation;

@@ -1,5 +1,5 @@
-import { logo } from './HeaderLogo.module.css';
+import LogoCSS from './HeaderLogo.module.css';
 
-const HeaderLogo = () => <h2 className={logo}>The Planets</h2>;
+const HeaderLogo = () => <h2 className={LogoCSS.logo}>The Planets</h2>;
 
 export default HeaderLogo;
