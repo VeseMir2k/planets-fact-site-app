@@ -1,9 +1,9 @@
 .statistic {
-  padding: 9px 24px 13px;
   display: flex;
   justify-content: space-between;
-  border: 1px solid var(--borderColor);
   margin-bottom: 8px;
+  border: 1px solid var(--borderColor);
+  padding: 9px 24px 13px;
   text-transform: uppercase;
 }
 
@@ -12,15 +12,15 @@
 }
 
 .titleStatistic {
-  font-size: 8px;
   color: var(--textColor1);
-  line-height: 16px;
   font-weight: 700;
+  font-size: 8px;
+  line-height: 16px;
   letter-spacing: 0.75px;
 }
 
 .dataStatistic {
+  font-size: 20px;
   font-family: 'Antonio';
   letter-spacing: -0.75px;
-  font-size: 20px;
 }

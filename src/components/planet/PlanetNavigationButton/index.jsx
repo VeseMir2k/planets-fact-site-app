@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { useContext } from 'react';
 import { SectionPlanetContext } from '../../../context/AppContext';
-import { button } from './PlanetNavigationButton.module.css';
+import PlanetNavigationButtonCSS from './PlanetNavigationButton.module.css';
 
 const PlanetNavigationButton = ({ name, section, namePlanet }) => {
   const { setSelectedSectionPlanet } = useContext(SectionPlanetContext);
@@ -19,7 +19,7 @@ const PlanetNavigationButton = ({ name, section, namePlanet }) => {
 
   return (
     <button
-      className={classNames(button, namePlanetBtn, nameSectionBtn)}
+      className={classNames(PlanetNavigationButtonCSS.button, namePlanetBtn, nameSectionBtn)}
       onClick={(event) => handleButton(event)}>
       {name}
     </button>

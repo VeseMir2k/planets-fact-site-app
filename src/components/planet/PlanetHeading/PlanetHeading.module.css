@@ -1,29 +1,29 @@
 .heading {
+  padding: 0 24px;
   font-weight: 700;
   font-family: 'Spartan';
   text-align: center;
-  padding: 0 24px;
 }
 
 .title {
+  margin-bottom: 16px;
+  font-weight: 400;
   font-size: 40px;
   font-family: 'Antonio';
-  font-weight: 400;
-  margin-bottom: 16px;
 }
 
 .description {
-  font-size: 11px;
   font-weight: 400;
+  font-size: 11px;
   line-height: 22px;
 }
 
 .source {
   display: block;
-  color: var(--textColor1);
   margin-top: 32px;
-  font-size: 12px;
+  color: var(--textColor1);
   font-weight: 400;
+  font-size: 12px;
   line-height: 25px;
 }
 

@@ -6,7 +6,7 @@ import PlanetHeading from '../PlanetHeading';
 import PlanetImage from '../PlanetImage';
 import PlanetNavigation from '../PlanetNavigation';
 import PlanetStatistics from '../PlanetStatistics';
-import planetCss from './Planet.module.css';
+import PlanetCss from './Planet.module.css';
 
 const Planet = () => {
   const { selectedSectionPlanet } = useContext(SectionPlanetContext);
@@ -16,7 +16,7 @@ const Planet = () => {
   const planetData = planets.filter((planet) => planet.name.toLowerCase() === locationPathName);
 
   return (
-    <section className={planetCss.planet}>
+    <section className={PlanetCss.planet}>
       <PlanetHeading
         namePlanet={planetData[0].name}
         sectionPlanetData={planetData[0][selectedSectionPlanet]}
