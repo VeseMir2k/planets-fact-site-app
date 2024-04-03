@@ -9,14 +9,16 @@ import {
 import NavigationLinkCSS from './HeaderNavigationLink.module.css';
 
 const HeaderNavigationLink = ({ pathConstant, PathConstants, dotColor }) => {
-  const { toggleOpen, toggleOverflowHidden } = useContext(NavigationOpenContext);
+  const { isMobile, toggleOpen, toggleOverflowHidden } = useContext(NavigationOpenContext);
   const { setSelectedSectionPlanetOverview } = useContext(SectionPlanetContext);
   const { setActiveOverviewButton } = useContext(OverviewButtonActiveContext);
   const dotBackground = `var(--${dotColor})`;
   const overviewPlanetButtonClass = `${pathConstant.toLowerCase()}ColorBtn`;
 
   const handleNavLink = () => {
-    toggleOverflowHidden();
+    if (isMobile) {
+      toggleOverflowHidden();
+    }
     toggleOpen();
     setSelectedSectionPlanetOverview();
     setActiveOverviewButton(overviewPlanetButtonClass);

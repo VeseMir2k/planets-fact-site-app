@@ -23,10 +23,21 @@ export const ColorPlanetsProvider = ({ children }) => {
 };
 
 export const NavigationOpenProvider = ({ children }) => {
-  const [isOpen, setOpen] = useState(false);
+  const mobileSize = window.matchMedia('(max-width: 768px)');
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(mobileSize.matches);
+
+  window.addEventListener('resize', () => {
+    setIsMobile(mobileSize.matches);
+    if (!isMobile) {
+      document.body.classList.remove('overflowHidden');
+      setIsOpen(false);
+    }
+  });
 
   const toggleOpen = () => {
-    setOpen((prevIsOpen) => !prevIsOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
   const toggleOverflowHidden = () => {
@@ -38,7 +49,7 @@ export const NavigationOpenProvider = ({ children }) => {
   };
 
   return (
-    <NavigationOpenContext.Provider value={{ isOpen, toggleOpen, toggleOverflowHidden }}>
+    <NavigationOpenContext.Provider value={{ isOpen, isMobile, toggleOpen, toggleOverflowHidden }}>
       {children}
     </NavigationOpenContext.Provider>
   );
