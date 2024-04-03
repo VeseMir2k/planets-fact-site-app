@@ -52,3 +52,107 @@
   bottom: 30px;
   width: 70px;
 }
+
+@media (min-width: 768px) {
+  .imageContainer {
+    height: 460px;
+  }
+
+  .mercuryImage {
+    width: 184px;
+    height: 184px;
+  }
+
+  .venusImage {
+    width: 253px;
+    height: 253px;
+  }
+
+  .earthImage {
+    width: 285px;
+    height: 285px;
+  }
+
+  .marsImage {
+    width: 213px;
+    height: 213px;
+  }
+
+  .jupiterImage {
+    width: 369px;
+    height: 369px;
+  }
+
+  .saturnImage {
+    width: 422px;
+    height: 422px;
+  }
+
+  .uranusImage {
+    width: 290px;
+    height: 290px;
+  }
+
+  .neptuneImage {
+    width: 285px;
+    height: 285px;
+  }
+
+  .geologyImage {
+    position: absolute;
+    bottom: 50px;
+    width: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .imageContainer {
+    height: 753px;
+  }
+
+  .mercuryImage {
+    width: 290px;
+    height: 290px;
+  }
+
+  .venusImage {
+    width: 400px;
+    height: 400px;
+  }
+
+  .earthImage {
+    width: 450px;
+    height: 450px;
+  }
+
+  .marsImage {
+    width: 336px;
+    height: 336px;
+  }
+
+  .jupiterImage {
+    width: 582px;
+    height: 582px;
+  }
+
+  .saturnImage {
+    width: 666px;
+    height: 666px;
+  }
+
+  .uranusImage {
+    width: 458px;
+    height: 458px;
+  }
+
+  .neptuneImage {
+    width: 450px;
+    height: 450px;
+  }
+
+  .geologyImage {
+    position: absolute;
+    bottom: 100px;
+    width: 150px;
+  }
+}
