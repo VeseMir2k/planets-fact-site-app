@@ -33,6 +33,8 @@ const HeaderNavigationLink = ({ pathConstant, PathConstants, dotColor }) => {
     setSelectedSectionPlanetOverview();
     // Set active overview button
     setActiveOverviewButton(overviewPlanetButtonClass);
+
+    document.querySelector('.earthColor').classList.remove('active');
   };
 
   return (
