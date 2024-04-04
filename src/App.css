@@ -30,6 +30,7 @@
   --saturnColor: rgba(252, 203, 107, 1);
   --uranusColor: rgba(101, 240, 213, 1);
   --neptuneColor: rgba(73, 126, 250, 1);
+  --hoverButton: rgba(216, 216, 216, 0.2);
 }
 
 html {
@@ -112,4 +113,17 @@ body {
 .neptuneColorBtn.active::before,
 .neptuneColorBtn:hover::before {
   background: var(--neptuneColor);
+}
+
+@media (min-width: 768px) {
+  .mercuryColorBtn:not(.active):hover::before,
+  .venusColorBtn:not(.active):hover::before,
+  .earthColorBtn:not(.active):hover::before,
+  .marsColorBtn:not(.active):hover::before,
+  .jupiterColorBtn:not(.active):hover::before,
+  .saturnColorBtn:not(.active):hover::before,
+  .uranusColorBtn:not(.active):hover::before,
+  .neptuneColorBtn:not(.active):hover::before {
+    background: var(--hoverButton);
+  }
 }

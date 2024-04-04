@@ -12,3 +12,9 @@
     padding: 28px 40px 47px;
   }
 }
+
+@media (min-width: 1024px) {
+  .statisticsContainer {
+    padding: 28px 100px 47px;
+  }
+}

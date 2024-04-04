@@ -38,3 +38,13 @@
     font-size: 24px;
   }
 }
+
+@media (min-width: 768px) {
+  .titleStatistic {
+    font-size: 11px;
+  }
+
+  .dataStatistic {
+    font-size: 40px;
+  }
+}

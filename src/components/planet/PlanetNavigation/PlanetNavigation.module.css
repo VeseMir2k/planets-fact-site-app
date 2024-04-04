@@ -23,3 +23,11 @@
     border: none;
   }
 }
+@media (min-width: 1024px) {
+  .nav {
+    grid-row: 2/3;
+    grid-column: 2 / 3;
+    justify-content: flex-start;
+    margin: 0 100px 0 0;
+  }
+}

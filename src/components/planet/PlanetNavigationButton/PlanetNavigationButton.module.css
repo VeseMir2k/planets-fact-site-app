@@ -34,3 +34,9 @@
     color: var(--textColor1);
   }
 }
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 12px;
+  }
+}

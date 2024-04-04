@@ -109,6 +109,8 @@
 
 @media (min-width: 1024px) {
   .imageContainer {
+    grid-column: 1/2;
+    grid-row: 1 / span 2;
     height: 753px;
   }
 
