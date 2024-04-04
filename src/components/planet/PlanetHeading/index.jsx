@@ -13,7 +13,13 @@ const PlanetHeading = ({ sectionPlanetData, namePlanet }) => {
       <span className={PlanetHeadeingCss.source}>
         Source : {/* Rendering Wikipedia link */}
         <a className={PlanetHeadeingCss.wikipedia} href={sectionPlanetData.source}>
-          Wikipedia <img src="./assets/icon-source.svg" alt="" /> {/* Rendering source icon */}
+          Wikipedia{' '}
+          <img
+            className={PlanetHeadeingCss.icon}
+            src="./assets/icon-source.svg"
+            alt="icon-source"
+          />
+          {/* Rendering source icon */}
         </a>
       </span>
     </div>

@@ -19,6 +19,7 @@ const PlanetNavigation = ({ namePlanet }) => {
           namePlanet={namePlanet} // Passing planet name to PlanetNavigationButton component
           section={section} // Passing section name to PlanetNavigationButton component
           name={buttonNames[index]} // Passing button name to PlanetNavigationButton component
+          index={index}
         />
       ))}
     </div>

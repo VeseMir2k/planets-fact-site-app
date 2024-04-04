@@ -12,3 +12,25 @@
   height: 4px;
   content: '';
 }
+
+.indexButton {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .button {
+    border: 1px solid var(--borderColor);
+    color: var(--white);
+  }
+
+  button::before {
+    z-index: -1;
+    height: 100% !important;
+  }
+
+  .indexButton {
+    display: inline-block;
+    padding: 0 15px 0 20px;
+    color: var(--textColor1);
+  }
+}

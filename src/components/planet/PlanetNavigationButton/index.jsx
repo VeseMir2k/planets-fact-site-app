@@ -4,7 +4,7 @@ import { SectionPlanetContext } from '../../../context/AppContext'; // Importing
 import PlanetNavigationButtonCSS from './PlanetNavigationButton.module.css'; // Importing CSS module for styling
 
 // Defining the PlanetNavigationButton component
-const PlanetNavigationButton = ({ name, section, namePlanet }) => {
+const PlanetNavigationButton = ({ name, section, namePlanet, index }) => {
   // Using SectionPlanetContext to access setSelectedSectionPlanet
   const { setSelectedSectionPlanet } = useContext(SectionPlanetContext);
 
@@ -30,6 +30,7 @@ const PlanetNavigationButton = ({ name, section, namePlanet }) => {
       className={classNames(PlanetNavigationButtonCSS.button, namePlanetBtn, nameSectionBtn)} // Applying classnames
       onClick={(event) => handleButton(event)}>
       {/* Handling button click */}
+      <span className={PlanetNavigationButtonCSS.indexButton}>0{index + 1}</span>
       {name} {/* Rendering button name */}
     </button>
   );

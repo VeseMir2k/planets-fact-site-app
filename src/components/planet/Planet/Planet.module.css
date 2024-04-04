@@ -1,6 +1,11 @@
 .planet {
   display: grid;
+  grid-template-columns: 1fr;
+  min-width: 100%;
 }
 
 @media (min-width: 768px) {
+  .planet {
+    grid-template-columns: 1fr 1fr;
+  }
 }
