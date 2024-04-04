@@ -12,8 +12,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://your-solution-url.com)
-- Live Site URL: [Live site URL](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://github.com/VeseMir2k/planets-fact-site-app)
+- Live Site URL: [Live site URL](https://vesemir2k.github.io/planets-fact-site-app/)
 
 ### Built with
 
