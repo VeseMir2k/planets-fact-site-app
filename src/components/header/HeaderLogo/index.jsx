@@ -8,7 +8,7 @@ const HeaderLogo = () => {
 
   return (
     <h2 className={LogoCSS.logo}>
-      <NavLink onClick={() => handleLogo()} to="/">
+      <NavLink onClick={() => handleLogo()} to="/planets-fact-site-app/">
         The Planets
       </NavLink>
     </h2>

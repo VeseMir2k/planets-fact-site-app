@@ -14,7 +14,8 @@ const Planet = () => {
   // Using useLocation hook to get current location
   const location = useLocation();
   // Extracting path name from location
-  const locationPathName = location.pathname === '/' ? 'earth' : location.pathname.substring(1);
+  const locationPathName =
+    location.pathname === '/planets-fact-site-app/' ? 'earth' : location.pathname.substring(23);
 
   // Filtering planetData based on locationPathName
   const planetData = planets.filter((planet) => planet.name.toLowerCase() === locationPathName);
